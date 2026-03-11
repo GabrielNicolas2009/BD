@@ -38,4 +38,11 @@ values (1, "Soul Eater", "Atsushi Okubo", "2004-06-22"),
 	   (2, "Pokémon Black and White", "Hidenori Kusaka", "2010-09-3"),
        (3, "O Pequeno Príncipe", "Antoine de Saint-Exupéry", "1943-04-13"),
        (4, "Pinóquio: Wood Edition", "Carlo Collodi", "1883-02-28"),
-       (5, "")
+       (5, "Binding 13", "Chloe Walsh", "2018-07-24");
+
+insert into usuarios(usuario_id, nome, email)
+values (1, "",""),
+	   (2, "",""),
+       (3, "",""),
+       (4, "",""),
+       (5, "","");
