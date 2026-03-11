@@ -41,8 +41,8 @@ values (1, "Soul Eater", "Atsushi Okubo", "2004-06-22"),
        (5, "Binding 13", "Chloe Walsh", "2018-07-24");
 
 insert into usuarios(usuario_id, nome, email)
-values (1, "",""),
-	   (2, "",""),
-       (3, "",""),
-       (4, "",""),
-       (5, "","");
+values (1, "Gabriel Kebab","kebabdasilvajrnick@gmail.com"),
+	   (2, "Manuella","manugonçalves2@gmail.com"),
+       (3, "Aline","alinealemã404@hotmail.com"),
+       (4, "Juan","juantilapiaslivias2@gmail.com"),
+       (5, "Layla","layladocescabulosos@hotmail.com");
