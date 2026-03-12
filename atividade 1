@@ -46,3 +46,24 @@ values (1, "Gabriel Kebab","kebabdasilvajrnick@gmail.com"),
        (3, "Aline","alinealemã404@hotmail.com"),
        (4, "Juan","juantilapiaslivias2@gmail.com"),
        (5, "Layla","layladocescabulosos@hotmail.com");
+       
+insert into generos (genero_id,nome)
+values (1, "Horror"),
+       (2, "Romance"),
+       (3, "Filosofia"),
+       (4, "Comédia"),
+       (5, "Conto de Fadas");
+       
+insert into genero_livro(livro_id,genero_id)
+values (1,1),
+	   (2,4),
+       (3,3),
+       (4,5),
+       (5,2);
+       
+insert into emprestimo(emprestimo_id,livro_id,usuario_id,data_emprestimo,data_devolucao)
+values (1,5,2,"2026-03-11", "2026-04-21"),
+       (2,3),
+       (3,1),
+       (4,4),
+       (5,2);
