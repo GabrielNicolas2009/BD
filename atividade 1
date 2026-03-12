@@ -33,7 +33,7 @@ foreign key (livro_id) references livros(livro_id),
 foreign key (genero_id) references generos(genero_id)
 );
 
-insert into livros(livros_id, titulo, autor, ano_publicacao)
+insert into livros(livro_id, titulo, autor, ano_publucacao)
 values (1, "Soul Eater", "Atsushi Okubo", "2004-06-22"),
 	   (2, "Pokémon Black and White", "Hidenori Kusaka", "2010-09-3"),
        (3, "O Pequeno Príncipe", "Antoine de Saint-Exupéry", "1943-04-13"),
@@ -42,7 +42,7 @@ values (1, "Soul Eater", "Atsushi Okubo", "2004-06-22"),
 
 insert into usuarios(usuario_id, nome, email)
 values (1, "Gabriel Kebab","kebabdasilvajrnick@gmail.com"),
-	   (2, "Manuella","manugonçalves2@gmail.com"),
+	   (2, "Manuela","manugonçalves2@gmail.com"),
        (3, "Aline","alinealemã404@hotmail.com"),
        (4, "Juan","juantilapiaslivias2@gmail.com"),
        (5, "Layla","layladocescabulosos@hotmail.com");
@@ -54,16 +54,26 @@ values (1, "Horror"),
        (4, "Comédia"),
        (5, "Conto de Fadas");
        
-insert into genero_livro(livro_id,genero_id)
+insert into livro_genero(livro_id,genero_id)
 values (1,1),
 	   (2,4),
        (3,3),
        (4,5),
        (5,2);
        
-insert into emprestimo(emprestimo_id,livro_id,usuario_id,data_emprestimo,data_devolucao)
+insert into emprestimos(emprestimo_id,livro_id,usuario_id,data_emprestimo,data_devolucao)
 values (1,5,2,"2026-03-11", "2026-04-21"),
-       (2,3),
-       (3,1),
-       (4,4),
-       (5,2);
+       (2,3,5,"2026-05-24", "2027-01-01"),
+       (3,1,3,"2024-07-23", "2025-09-09"),
+       (4,4,4,"4444-04-04", "5555-05-05"),
+       (5,2,1,"2009-05-24","2026-05-24");
+       
+select * from livros;
+
+select * from livros where year(ano_publucacao) > 2000;
+
+select livros.titulo, usuarios.nome, emprestimos.data_emprestimo from emprestimos
+join livros on livros.livro_id = emprestimos.livro_id
+join usuarios on usuarios.usuario_id = emprestimos.usuario_id;
+
+select * from livros where titulo like "%P%";
